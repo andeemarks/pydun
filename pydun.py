@@ -23,9 +23,11 @@ the hallway as your eyes slowly adjust to the gloom.""")
 
 	command = utility.get_command()
 
-	# TODO
-	# TODO: If the player looks now, they'll find an old book on the ground
-	# TODO
+	# TODO: (1) If the player looks now, they'll find an old book on the ground
+	# TODO: Hint: http://www.pythonforbeginners.com/basics/python-conditional-statements
+	# TODO: (2) If the player enter "Help" or "help" or "HELP" (or any other variation of commands),
+	# TODO: they should be treated the same way.
+	# TODO: Hint: https://docs.python.org/2/library/string.html#string-functions
 
 if (command == 'look'):
 	utility.show("""You peer closely at the front door, but apart from it's obvious strength and age, it appears normal.""")
