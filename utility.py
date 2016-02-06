@@ -2,6 +2,9 @@ from colors import red, green, blue
 import textwrap
 import os
 
+# There should be no need to look here just yet
+# This file is just used for hiding away some details
+# that aren't needed.
 columns, rows = os.popen('stty size', 'r').read().split()
 max_width = int(rows)
 
@@ -18,5 +21,5 @@ def list_commands():
 	print blue("- open")
 	print blue("- look")
 	print blue("- quit")
-	
+
 
