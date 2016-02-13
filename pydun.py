@@ -1,6 +1,7 @@
 from colors import red, green, blue
 import utility
 import string
+from domain import Location
 
 print red("PYDUN - A Python Dungeon-Styled Text Adventure!\n") 
 print red("(Type 'help' for commands.)\n")
