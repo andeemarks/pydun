@@ -22,6 +22,8 @@ if (command == 'open'):
     command = utility.get_command()
 
 if (command == 'look'):
+    # TODO Now that we have our Location class, create a new one for this book
+    # TODO You'll need to use it with something like "locations['book'].show"
     utility.show("""There's an old book on the ground.  It shakes violently.
         You want to open it, but your instinct tells you to leave it""")
     command = utility.get_command()
