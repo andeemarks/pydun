@@ -1,6 +1,7 @@
 from colors import red, green, blue
 import textwrap
 import os
+import string
 
 # There should be no need to look here just yet
 # This file is just used for hiding away some details
@@ -14,7 +15,7 @@ def show(text):
 
 def get_command():
 	print green("\nWhat do you do now? ") 
-	return raw_input("> ")
+	return string.lower(raw_input("> "))
 
 def list_commands():
 	print blue("\nYou have the following commands available:")

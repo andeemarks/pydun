@@ -11,7 +11,7 @@ with a long sad creak and beckons you insde.  As you walk up the front path, you
 flutter of movement behind the upstairs curtain?  Regardless, you continue
 walking until you arrive at the front door.""")
 
-command = string.lower (utility.get_command())
+command = utility.get_command()
 
 if (command == 'help'):     
 	utility.list_commands()
