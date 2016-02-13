@@ -1,11 +1,14 @@
 from colors import red
 import utility
+import subprocess
 from domain import Location
 
 print red("PYDUN - A Python Dungeon-Styled Text Adventure!\n")
 print red("(Type 'help' for commands.)\n")
 
 locations = Location.bootstrap()
+
+music = subprocess.Popen(["afplay", "./soundtrack.mp3"])
 
 locations['start'].show()
 
@@ -39,3 +42,5 @@ if (command == 'open'):
     utility.show("""You are swallowed whole by the book.  The end""")
 
 print red("\nThanks for playing!")
+
+music.kill()
