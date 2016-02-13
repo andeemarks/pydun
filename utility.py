@@ -15,7 +15,8 @@ def show(text):
 
 def get_command():
 	print green("\nWhat do you do now? ") 
-	return string.lower(raw_input("> "))
+	command = string.lower(raw_input("> "))
+	return command
 
 def list_commands():
 	print blue("\nYou have the following commands available:")
