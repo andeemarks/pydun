@@ -1,3 +1,4 @@
+from colors import blue
 import utility
 
 
@@ -7,12 +8,17 @@ class Location(object):
 
         self.description = description
         self.destinations = []
-        self.commands = []
+        self.commands = ['open', 'look', 'help', 'quit']
 
     def show(self):
         """Print my description"""
 
         utility.show(self.description)
+
+    def show_commands(self):
+        print blue("\nYou have the following commands available:")
+        for command in self.commands:
+            print blue("- " + command)
 
     @staticmethod
     def bootstrap():

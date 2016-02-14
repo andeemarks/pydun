@@ -22,10 +22,3 @@ def get_command():
         command = input_command()
 
     return command
-
-
-def list_commands():
-    print blue("\nYou have the following commands available:")
-    print blue("- open")
-    print blue("- look")
-    print blue("- quit")
