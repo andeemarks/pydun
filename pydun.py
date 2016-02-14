@@ -12,8 +12,6 @@ music = subprocess.Popen(["afplay", "./soundtrack.mp3"])
 
 locations['start'].show()
 
-# TODO Make utility.get_command() force the user to enter a valid command
-# TODO Hint: https://wiki.python.org/moin/WhileLoop
 command = utility.get_command()
 
 if (command == 'help'):
