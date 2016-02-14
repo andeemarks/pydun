@@ -18,6 +18,9 @@ def show(text):
 def get_command():
     print green("\nWhat do you do now? ")
     command = string.lower(raw_input("> "))
+    while command not in ['look', 'open', 'help', 'quit']:
+        command = string.lower(raw_input("> "))
+
     return command
 
 

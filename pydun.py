@@ -1,8 +1,7 @@
-@@ -1,46 +0,0 @@
 from colors import red
+from domain import Location
 import utility
 import subprocess
-from domain import Location
 
 print red("PYDUN - A Python Dungeon-Styled Text Adventure!\n")
 print red("(Type 'help' for commands.)\n")
