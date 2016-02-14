@@ -6,6 +6,8 @@ class Location(object):
         """Create a new Location with this description"""
 
         self.description = description
+        self.destinations = []
+        self.commands = []
 
     def show(self):
         """Print my description"""
