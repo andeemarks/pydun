@@ -2,6 +2,20 @@ from colors import blue
 import utility
 
 
+class Map(object):
+    def __init__(self):
+        """Initialise the map of the dungeon"""
+        self.locations = Location.bootstrap()
+
+    def start(self):
+        """Return the first location for the dungeon"""
+        return self.locations['start']
+
+    def move_from(self, location, command):
+        """Return the destination after taking 'command' from 'location'"""
+        return location
+
+
 class Location(object):
     def __init__(self, description):
         """Create a new Location with this description"""
@@ -36,5 +50,9 @@ and you cough as dust tickles your throat.  You gulp and take a nervous step
 inside. No sooner have you crossed the threshold than the old front door slams
 shut behind you, locking you in.  Resisting the temptation to scream, you wait
 in the hallway as your eyes slowly adjust to the gloom.""")
+
+        map = {}
+        map[1, 1] = start
+        map[1, 2] = entrance
 
         return {'start': start, 'entrance': entrance}
