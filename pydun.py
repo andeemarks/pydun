@@ -11,7 +11,7 @@ map = Map()
 root = Tk()
 display = Display(root)
 current_location = map.start()
-display.show(current_location.description)
+display.show(current_location)
 
 root.mainloop()
 
