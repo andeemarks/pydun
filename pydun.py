@@ -1,24 +1,19 @@
-from colors import red
 from domain import Location, Map
-import utility
 import subprocess
-
-print red("PYDUN - A Python Dungeon-Styled Text Adventure!\n")
-print red("(Type 'help' for commands.)\n")
+from display import Display
+from Tkinter import Tk
 
 locations = Location.bootstrap()
 map = Map()
 
-music = subprocess.Popen(["afplay", "./soundtrack.mp3"])
+# music = subprocess.Popen(["afplay", "./soundtrack.mp3"])
 
-map.start().show()
+root = Tk()
+display = Display(root)
+current_location = map.start()
+display.show(current_location.description)
 
-command = utility.get_command()
-while command != 'quit':
-    if (command == 'help'):
-        locations['start'].show_commands()
-        
-    command = utility.get_command()
+root.mainloop()
 
 
 # if (command == 'open'):
@@ -41,6 +36,4 @@ while command != 'quit':
 # if (command == 'open'):
 #     utility.show("""You are swallowed whole by the book.  The end""")
 
-print red("\nThanks for playing!")
-
-music.kill()
+# music.kill()
