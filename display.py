@@ -2,8 +2,9 @@ from Tkinter import *
 
 
 class Display:
-    def __init__(self, master):
-
+    def __init__(self, master, handler):
+        self.master = master
+        self.handler = handler
         self.frame = Frame(master)
         self.frame.pack()
 
@@ -29,14 +30,16 @@ class Display:
     def check_command(self):
         """Invoked when the return key is entered in the command field"""
         new_command = self.command_value.get().strip().lower()
-        print new_command
         self.show_command(new_command)
-        if (new_command == "exit"):
-            self.frame.quit
+        self.handler.process_command(new_command)
 
-    def show(self, location):
+    def show_location(self, location):
         """Update the output with the contents"""
         self.output.insert(END, location.description)
+
+    def show(self, description):
+        """Update the output with the contents"""
+        self.output.insert(END, description)
 
     def show_command(self, command):
         """Update the output with the contents"""
