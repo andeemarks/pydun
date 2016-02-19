@@ -35,14 +35,15 @@ class Display:
 
     def show_location(self, location):
         """Update the output with the contents"""
-        self.output.insert(END, location.description)
+        self.show(location.description)
 
     def show(self, description):
         """Update the output with the contents"""
         self.output.insert(END, description)
+        self.output.yview(END)
 
     def show_command(self, command):
         """Update the output with the contents"""
         self.output.tag_config("COMMAND", foreground="blue", font=("Helvetica", 14, "italic"))
         self.output.insert(INSERT, "\n\n" + command + "\n", ("COMMAND"))
-        # self.output.tag_remove("COMMAND",  "1.0", 'end')
+        self.output.yview(END)
