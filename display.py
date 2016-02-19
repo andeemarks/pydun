@@ -21,6 +21,7 @@ class Display:
         self.prompt = Label(command_frame, text="What do you want to do now?", foreground="#00AA00", font=("Helvetica", 14, "bold italic"))
         self.prompt.pack(side=LEFT)
 
+        # Make this field take up more space so it fill the rest of the row?
         self.command_value = StringVar()
         self.command = Entry(command_frame, textvariable=self.command_value)
         self.command.pack(side=RIGHT, expand=True)
@@ -30,6 +31,7 @@ class Display:
     def check_command(self):
         """Invoked when the return key is entered in the command field"""
         new_command = self.command_value.get().strip().lower()
+        # TODO We should stop invalid commands being shown on the output
         self.show_command(new_command)
         self.handler.process_command(new_command)
 
